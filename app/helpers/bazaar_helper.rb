@@ -1,0 +1,2 @@
+module BazaarHelper
+end

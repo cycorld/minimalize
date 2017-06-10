@@ -10,6 +10,7 @@ end
 gem 'rails', '~> 5.0.3'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
+gem "active_link_to"
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'

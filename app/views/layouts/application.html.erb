@@ -27,7 +27,6 @@
           </button>
           <a class="navbar-brand" href="#">미니멀리즘</a>
         </div>
-    
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
@@ -45,8 +44,8 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">내 하우스 <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <% if user_signed_in? %>
-                  <%= active_link_to '내 물건등록', new_bazaar_path, wrap_tag: :li %>
-                  <li><a href="#">하우스관리</a></li>
+                  <%= active_link_to '스팟등록', new_spot_path, wrap_tag: :li %>
+                  <li><a href="#">내 물건 등록</a></li>
                   <%= active_link_to '내 정보수정', edit_user_registration_path, wrap_tag: :li %>
                   <li><a href="#">메시지함</a></li>
                   <li role="separator" class="divider"></li>
@@ -60,9 +59,29 @@
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
-    </nav>    
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    </nav>
+    <div class="container">
+      <% if alert %>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-danger" role="alert">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  <%= alert %>
+                </div>
+            </div>
+        </div>
+      <% end %>
+      <% if notice %>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="alert alert-info" role="alert">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  <%= notice %>
+                </div>
+            </div>
+        </div>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>

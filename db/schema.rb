@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170610060503) do
 
-  create_table "bazaars", force: :cascade do |t|
+  create_table "spots", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "title",                                           null: false
     t.text     "intro"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20170610060503) do
     t.integer  "status",                              default: 0
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
-    t.index ["user_id"], name: "index_bazaars_on_user_id"
+    t.index ["user_id"], name: "index_spots_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

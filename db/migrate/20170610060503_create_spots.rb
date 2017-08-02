@@ -1,6 +1,6 @@
-class CreateBazaars < ActiveRecord::Migration[5.0]
+class CreateSpots < ActiveRecord::Migration[5.0]
   def change
-    create_table :bazaars do |t|
+    create_table :spots do |t|
       t.references :user, foreign_key: true
       t.string :title, null: false
       t.text :intro

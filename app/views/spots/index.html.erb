@@ -1,4 +1,6 @@
-<h1>마켓들</h1>
+<h1>스팟들</h1>
+<ol>
 <% @spots.each do |spot| %>
-    <%= link_to spot.title, spot %>
+  <li><%= link_to spot.title, spot %></li>
 <% end %>
+</ol>

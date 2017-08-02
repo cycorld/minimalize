@@ -12,6 +12,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'devise'
 gem 'active_link_to'
 gem 'simple_form'
+gem 'gmap_coordinates_picker'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'

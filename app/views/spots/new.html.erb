@@ -2,6 +2,7 @@
     <%= f.input :title %>
     <%= f.input :intro %>
     <%= f.input :address %>
+    <%= f.gmap_coordinate_picker :lat_column => 'lat', :lng_column => 'lng' , :zoom_level => 18, :default_coordinates => [37.564760, 126.902594], autocomplete: { enable: true, class: 'form-control' } %>
     <%= f.input :status %>
     <%= f.button :submit %>
 <% end %>
